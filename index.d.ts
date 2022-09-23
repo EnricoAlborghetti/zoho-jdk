@@ -28,7 +28,7 @@ export namespace ZOHO {
     id: string;
   }
   export interface Response {
-    datparams: any[];
+    data: any[];
   }
   export interface InvokeParams {
     method: string;
