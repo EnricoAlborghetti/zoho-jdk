@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2015",
+    "sourceMap": false,
+    "declaration": true,
+    "outDir": "build",
+    "allowJs": false,
+    "strict": false
+  },
+  "include": [
+    "src/**/*",
+  ]
+}

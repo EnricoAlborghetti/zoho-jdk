@@ -7,23 +7,27 @@
   "contributors": [
     "Enrico Alborghetti (https://github.com/EnricoAlborghetti)"
   ],
-  "main": "index.js",
-  "types": "index.d.ts",
-  "type": "commonjs",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/EnricoAlborghetti/zoho-tdk.git"
   },
-  "scripts": {},
-  "dependencies": {},
-  "typesPublisherContentHash": "5613f9d9eb2d0d132e0af9cbafeadfe263bf7c525c715d0db37ba47fb96ccc45",
+  "scripts": {
+    "build": "tsc --build",
+    "transform": "npx -p typescript tsc libs/*.js --declaration --allowJs --emitDeclarationOnly --outDir libs",
+    "postbuild2": "cp 'libs/zoho.d.ts' 'dist/libs/zoho.d.ts'"
+  },
   "typeScriptVersion": "3.8",
   "bugs": {
     "url": "https://github.com/EnricoAlborghetti/zoho-tdk/issues"
   },
   "files": [
-    "index.js",
+    "build",
+    "libs",
     "index.d.ts"
   ],
-  "author": ""
+  "author": "",
+  "dev-dependencies": {
+    "@babel/eslint-parser": "^7.19.1"
+  }
 }
